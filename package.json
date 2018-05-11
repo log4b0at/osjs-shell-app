@@ -1,6 +1,6 @@
 {
   "name": "osjs-shell-app",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An implementation of ShellCore for OS.JS",
   "main": "index.js",
   "scripts": {
