@@ -1,6 +1,6 @@
 {
   "name": "osjs-shell-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An implementation of ShellCore for OS.JS",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,9 @@
   ],
   "author": "log4b0at",
   "license": "MIT",
+  "dependencies": {
+	"osjs-shell-core": "^1.0.0"
+  },
   "bugs": {
     "url": "https://github.com/log4b0at/osjs-shell-app/issues"
   },
