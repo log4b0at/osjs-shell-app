@@ -1,6 +1,7 @@
 import ShellCore from 'osjs-shell-core';
 import { EventEmitter } from 'events';
 import path from 'path';
+import icon from './assets/vectors/shell.svg';
 
 export default class ShellApp extends EventEmitter {
 
@@ -43,7 +44,7 @@ export default class ShellApp extends EventEmitter {
 				this.emit('done');
 			});
 		this.window = _window;
-		_window.setIcon(path.join(__dirname, 'assets/vectors/shell.svg'));
+		_window.setIcon(path.join(__dirname, 'apps/'+this.appname, icon));
 	}
 
 	createShellCore(appCore, windowInstance, container) {
