@@ -1,5 +1,6 @@
 import ShellCore from 'osjs-shell-core';
 import { EventEmitter } from 'events';
+import path from 'path';
 
 export default class ShellApp extends EventEmitter {
 
@@ -29,7 +30,7 @@ export default class ShellApp extends EventEmitter {
 	}
 
 	createWindow(core) {
-		this.process.createWindow({
+		let _window = this.process.createWindow({
 			id: 'ShellWindow_' + this.appname.replace(/\s/g, '_'),
 			title: 'Shell - ' + this.appname,
 			dimension: { width: 550, height: 400 },
@@ -41,6 +42,8 @@ export default class ShellApp extends EventEmitter {
 				this.createShellCore(core, windowInstance, container);
 				this.emit('done');
 			});
+		this.window = _window;
+		_window.setIcon(path.join(__dirname, 'assets/vectors/shell.svg'));
 	}
 
 	createShellCore(appCore, windowInstance, container) {
